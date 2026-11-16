@@ -1,0 +1,14 @@
+/* Tailwind, then the design tokens (colors, shadows, typography, chart colors) */
+@import "tailwindcss";
+@import "./tokens/colors.css";
+@import "./tokens/shadows.css";
+@import "./tokens/typography.css";
+@import "./tokens/chart-colors.css";
+
+body {
+  min-height: 100vh;
+  background: var(--color-neutral-50);
+  align-items: center;
+  /* "safe" keeps tall pages scrollable from the top */
+  justify-content: safe center;
+}

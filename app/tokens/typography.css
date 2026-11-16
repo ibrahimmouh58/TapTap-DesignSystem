@@ -1,0 +1,29 @@
+@theme {
+  /* ═══════════ Font families (Figma) ═══════════ */
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Helvetica, "PingFang SC",
+    "Hiragino Sans GB", "Microsoft YaHei", SimSun, sans-serif;
+  --font-number: "Helvetica Neue", Helvetica, sans-serif; /* numbers */
+  --font-mono: Consolas, "SF Mono", Menlo, monospace; /* code and data */
+
+  /* ═══════════ Type scale: size / line height ═══════════ */
+  --text-h1: 30px;
+  --text-h1--line-height: 38px;
+
+  --text-h2: 24px;
+  --text-h2--line-height: 32px;
+
+  --text-h3: 20px;
+  --text-h3--line-height: 28px;
+
+  --text-title: 18px;
+  --text-title--line-height: 26px;
+
+  --text-subtitle: 16px;
+  --text-subtitle--line-height: 24px;
+
+  --text-body: 14px;
+  --text-body--line-height: 22px;
+
+  --text-caption: 12px;
+  --text-caption--line-height: 18px;
+}

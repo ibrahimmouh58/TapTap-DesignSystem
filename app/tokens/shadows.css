@@ -1,0 +1,7 @@
+@theme {
+  /* Figma shadows: Elevation 1 to 4, two layers each (X = 0, spread = 0) */
+  --shadow-elevation-1: 0 1px 1px 0 rgb(0 0 0 / 0.02), 0 2px 4px 0 rgb(0 0 0 / 0.04);
+  --shadow-elevation-2: 0 1px 4px 0 rgb(0 0 0 / 0.04), 0 4px 10px 0 rgb(0 0 0 / 0.08);
+  --shadow-elevation-3: 0 2px 20px 0 rgb(0 0 0 / 0.04), 0 8px 32px 0 rgb(0 0 0 / 0.08);
+  --shadow-elevation-4: 0 8px 20px 0 rgb(0 0 0 / 0.06), 0 24px 60px 0 rgb(0 0 0 / 0.12);
+}

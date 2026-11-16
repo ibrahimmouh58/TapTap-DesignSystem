@@ -1,0 +1,25 @@
+@theme static {
+  /* ═══════════ Standard (10 chart colors) ═══════════ */
+  --color-chart-1: #4887f6;
+  --color-chart-2: #6167f0;
+  --color-chart-3: #59c3cf;
+  --color-chart-4: #9667ef;
+  --color-chart-5: #e2635e;
+  --color-chart-6: #58b6ea;
+  --color-chart-7: #f1cd49;
+  --color-chart-8: #71c77a;
+  --color-chart-9: #e98e39;
+  --color-chart-10: #e47b5c;
+
+  /* ═══════════ Auxiliary (the same, lighter) ═══════════ */
+  --color-chart-aux-1: #689cf6;
+  --color-chart-aux-2: #7d81f2;
+  --color-chart-aux-3: #6fcbd5;
+  --color-chart-aux-4: #a881f3;
+  --color-chart-aux-5: #e57d7a;
+  --color-chart-aux-6: #70c0ee;
+  --color-chart-aux-7: #f2d65e;
+  --color-chart-aux-8: #86d192;
+  --color-chart-aux-9: #eca454;
+  --color-chart-aux-10: #ea9178;
+}
