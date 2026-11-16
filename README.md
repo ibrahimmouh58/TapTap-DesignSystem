@@ -10,6 +10,7 @@ Colors, shadows, typography and icons come from the Figma file and are exposed a
 - [Design tokens](#design-tokens)
 - [Icons](#icons)
 - [Shared helpers](#shared-helpers)
+- [Interactive demo](#interactive-demo)
 - [Components](#components)
   - [general](#general) · [data-entry](#data-entry) · [data-display](#data-display) · [feedback](#feedback) · [navigation](#navigation) · [charts](#charts)
 - [Conventions](#conventions)
@@ -27,7 +28,7 @@ npm run dev     # http://localhost:3000
 
 Other scripts: `npm run build` (production build + type check), `npm run lint`.
 
-`app/page.tsx` is the demo page: import the variants you are working on and render them there.
+Open **http://localhost:3000/interactive-demo** to browse every component and its variants (see [Interactive demo](#interactive-demo)). `app/page.tsx` is the home page.
 
 | Package | Purpose |
 |---|---|
@@ -61,8 +62,10 @@ systemdesign/
 │   │   └── useModal.ts     shared Dialog / Drawer behavior
 │   ├── tokens/             colors.css, shadows.css, typography.css, chart-colors.css
 │   ├── globals.css         Tailwind + tokens
+│   ├── interactive-demo/
+│   │   └── page.tsx        component explorer (sidebar + variants)
 │   ├── layout.tsx
-│   └── page.tsx            demo page
+│   └── page.tsx            home page
 ├── scripts/build-icons.mjs SVG files → icons.generated.ts
 └── package.json
 ```
@@ -190,6 +193,30 @@ import { Icon } from "../../icons/Icon";
 | `lib/listbox.ts` | `useDismiss` (outside click + Escape, focus back to the trigger), `moveFocus` (↑ ↓ Home End in a list), `focusSelected`. Used by Select, Dropdown, Cascader and the pickers. |
 | `lib/useModal.ts` | Open state, Escape, scroll lock, focus moved in, trapped with Tab and restored on close. Used by Dialog and Drawer. |
 | `data-entry/Calendar.tsx` | Shared month calendar (`CalendarMonth`, `CalendarHeader`) and date helpers, used by DateTimePicker, RangePicker and Comparison. |
+
+## Interactive demo
+
+`app/interactive-demo/page.tsx` is an examples page for the whole design system, at `/interactive-demo`.
+
+- **Sidebar** (left): a search field and the components grouped by category (General, Data Entry, Data Display, Feedback, Navigation, Charts), with their number of variants.
+- **Main area**: the selected component, its description, then one card per variant. Wide components (Table, Transfer, Tabs, Steps, Pagination) take the full width.
+- **Shareable links**: the selected component is kept in the URL hash, e.g. `/interactive-demo#table`, so the Back button and direct links work.
+- **Overlays**: Dialog and Drawer are closed by default, each card has an "Open" button.
+
+To add a component or a variant, edit the `registry` array at the top of the file:
+
+```tsx
+{
+  id: "badge",                       // used in the URL: /interactive-demo#badge
+  name: "Badge",
+  description: "Red counter or dot on top of another element.",
+  wide: false,                       // true = one card per row
+  variants: [
+    v("Single digit", () => <BadgeSingleDigit />),
+    v("Over 99", () => <BadgeDoubleDigit count={120} />),
+  ],
+}
+```
 
 ## Components
 

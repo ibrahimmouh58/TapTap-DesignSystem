@@ -6,17 +6,13 @@ import { Icon } from "../../icons/Icon";
 
 export interface BreadcrumbItem {
   title: ReactNode;
-  /** Link. Without href the item is not clickable (the current page needs none) */
   href?: string;
-  /** Icon before the text */
   icon?: ReactNode;
   onClick?: () => void;
 }
 
 export interface BreadcrumbProps {
-  /** Defaults to the Figma list. The last item is the current page */
   items?: BreadcrumbItem[];
-  /** "slash": "/" (default) | "arrow": right arrow */
   separator?: "slash" | "arrow";
   className?: string;
 }
